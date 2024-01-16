@@ -1,0 +1,132 @@
+/*--- GLOBALES ---*/
+h1
+{
+    font-size: 3vw;
+    font-family: 'Gentleman-black';
+}
+
+h2
+{
+    text-align: center;
+    font-size: 1.8vw !important;
+}
+
+p
+{
+    font-size: 1.3vw !important;
+}
+
+form
+{
+    width: 80%;
+    margin-left: 10%;
+}
+
+fieldset
+{
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #000000;
+
+    padding: 25px;
+}
+
+fieldset > div 
+{
+    padding: 15px;
+    margin: 10px;
+}
+
+input[type~="text"], input[type~="number"], input[type~="date"]
+{
+    background-color: rgb(216, 223, 255);
+    border: #FFF;
+} 
+
+label
+{
+    margin-right: 10px;
+}
+
+/*--- CLASES E IDES ---*/
+.div_cuerpo
+{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.bor_total
+{
+    border: 1px;
+    box-shadow: rgb(141, 141, 141) 0px 0px 0px 2px;
+    border-radius: 15px;
+
+    
+}
+
+.bor_arab
+{
+    /*border-color: rgb(141, 141, 141);*/
+    border-bottom: 2px solid rgb(141, 141, 141);
+    border-top: 2px solid rgb(141, 141, 141);
+}
+
+.h1_par
+{
+    font-size: 2.2vw !important;
+    font-family: 'Montserrat-Black';
+}
+
+.temp
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 7vw;
+    margin-left: 44%;
+}
+
+.temp > *
+{
+    /*
+        width: 30px;
+        height: 30px;
+    */
+
+    background-color: #F81D44;
+    box-shadow: 0 0 10px #c9c9c9;
+    border-radius: 10px;
+    border: 2px solid black;
+
+    padding: 0.8vw;
+    margin: 0.9vw;
+
+    width: 0vw;
+}
+
+.color
+{
+    width: 110px;
+}
+
+.politica
+{
+    color: rgb(141, 141, 141);
+}
+
+.Benviar
+{
+    width: 98%;
+    margin-left: 1%;
+
+    padding: 20px;
+    margin: 10px 0px 0px 0px; /*Soy especial*/
+
+    background: #393939;
+    color: #FFF;
+
+    font-size: larger;
+
+    border-radius: 50px;
+}
+

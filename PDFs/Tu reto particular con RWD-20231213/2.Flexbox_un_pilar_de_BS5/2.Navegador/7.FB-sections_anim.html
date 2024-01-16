@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos Flexbox: RWD y otras tareas</title>
+    <style>
+      body {
+          font-family: Roboto, sans-serif;
+      }
+      
+      .rwd {
+          width: 600px;
+          height: 700px;
+          display: flex;
+          flex-flow: column nowrap;
+          font-size: 20px;
+          animation: 4s ease 1s infinite resize-h;
+      }
+      @keyframes resize-h {
+          25% { width: 300px; }
+          50% { width: 300px; }
+          75% { width: 600px; }
+      }
+      header {
+          background: lightblue;
+          text-align: center;
+          padding: 2rem;
+      }
+      main {
+          flex: 1;
+          display: flex;
+          flex-flow: row wrap;
+      }
+      nav {
+          padding: 2rem;
+          background: #f0f0f0;
+          flex: 1;
+      }
+      .content {
+          padding: 2rem;
+          background: #e0e0e0;
+          flex: 3;
+      }
+      footer {
+          padding: 2rem;
+          background: #f09090;
+      }
+
+      .card {
+          width: 400px;
+          height: 400px;
+          vertical-align: bottom;
+          display: inline-flex;
+          flex-direction: column;
+          box-shadow: 0 0 5px #303030;
+          margin: 1rem 1rem 1rem 0;
+          background: #f0f0f0;
+      }
+      .card>.img {
+          flex: 0 1 50%;
+          display: block;
+          background-image: url(https://placeimg.com/300/300/nature/grayscale);
+          background-size: cover;
+      }
+      .card>.title {
+          margin: 0;
+          padding: 1rem;
+          font-size: 1.2rem;
+          font-weight: bold;
+      }
+      .card>.description {
+          padding: 0 1rem;
+          flex: 1;
+      }
+      .card>.author {
+          padding: 1rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #909090;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplos Flexbox: RWD y otras tareas</h1>
+
+    <div class="rwd">
+      <header>Cabecera</header>
+      <main>
+        <nav>Navegación</nav>
+        <div class="content">
+          Cuerpo principal: ocupa la altura y anchura disponibles, pese a que su contenido no tenga la extensión necesaria
+        </div>
+      </main>
+      <footer>Pie de página</footer>
+    </div>
+
+    <div class="card">
+      <div class="img"></div>
+      <p class="title">Título del artículo</p>
+      <div class="description">Un texto para describir el contenido del artículo, de extensión desconocida. Sea larga o corta, la descripción ocupa toda la altura libre.</div>
+      <div class="author">David Charte</div>
+    </div>
+    
+    <div class="card">
+      <div class="img"></div>
+      <p class="title">Título de otro artículo</p>
+      <div class="description">Algo menos de texto.</div>
+      <div class="author">David Charte</div>
+    </div>
+  </body>
+</html>

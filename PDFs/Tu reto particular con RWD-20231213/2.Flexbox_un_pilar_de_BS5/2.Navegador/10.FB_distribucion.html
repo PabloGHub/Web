@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplos Flexbox: posicionamiento y distribución</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.0/css/fork-awesome.min.css" integrity="sha256-sX8HLspqYoXVPetzJRE4wPhIhDBu2NB0kYpufzkQSms=" crossorigin="anonymous" defer>
+    <style>
+      body {
+          margin: 0;
+          font-size: 18px;
+          font-family: Roboto, sans-serif;
+          min-height: 100vh;
+      }
+      header {
+          box-sizing: border-box;
+          padding: 2rem;
+          min-height: 80vh;
+          background-color: #6c71c4;
+          background-image: linear-gradient(#6c71c4 25%, #2aa198 75%);
+          color: white;
+          border-radius: 0 0 1rem 1rem;
+          box-shadow: 10px 0 32px  rgba(0,0,0,0.4);
+      }
+      h1 {
+          margin: 1rem 0;
+          font-size: 4rem;
+          font-size: calc(2rem + 3vw);
+      }
+      .subtitle {
+          font-size: 1.4rem;
+      }
+      .meta {
+          background: rgba(70,70,70,0.3);
+          border: 1px solid rgba(255,255,255,.2);
+          box-shadow: 0 0 10px rgba(70,70,70,0.3);
+          min-height: 12vh;
+          padding: 1rem;
+          border-radius: 8px;
+      }
+      .meta > * {
+          display: inline-block;
+          margin-right: .5rem;
+      }
+      .author-image {
+          display: inline-block;
+          vertical-align: middle;
+          width: 3rem;
+          height: 3rem;
+          margin-right: 0.5rem;
+          border: 1px solid #f0f0f0;
+          border-radius: 3rem;
+          background-color: #a0a0a0;
+      }
+      .author-name {
+          font-style: italic;
+      }
+      .comments {
+          text-decoration: underline;
+      }
+      .share i {
+          margin: 0 .2rem;
+      }
+
+      main {
+          max-width: 40rem;
+          margin: 0 auto;
+          padding: 2rem;
+      }
+      /* Por si el navegador admite Flexbox */
+      @supports (display: flex) {
+          header {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: stretch;
+          }
+          .meta {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              align-content: space-around;
+              align-items: baseline;
+          }
+          .meta>* {
+              white-space: nowrap;
+          }
+      }
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <h1>Distribución de elementos con Flexbox</h1>
+      <p class="subtitle">En este ejemplo observamos cómo repartir los elementos a lo largo del espacio disponible con las propiedades <code>justify-content</code> y <code>align-*</code>.</p>
+      <div class="meta">
+        <span class="author">
+          <span class="author-image"></span>
+          <span class="author-name">Lucas Taña</span>
+        </span>
+        <span class="date">30 Noviembre 2021</span>
+        <span class="comments">3 comentarios</span>
+        <span class="share">
+          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-linkedin-square"></i>
+        </span>
+      </div>
+    </header>
+    <main>
+      En la cabecera superior usamos Flexbox en dos puntos. Primeramente, distribuimos verticalmente el título, el subtítulo y los metadatos. Por otro lado, organizamos horizontalmente el autor, la fecha y los enlaces a comentarios y redes sociales.
+    </main>
+  </body>
+</html>

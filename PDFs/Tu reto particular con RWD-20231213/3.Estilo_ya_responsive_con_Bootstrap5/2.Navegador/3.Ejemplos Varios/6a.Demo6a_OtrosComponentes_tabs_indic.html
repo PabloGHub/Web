@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Otros componentes Bootstrap</title>
+
+    <!-- Bootstrap 5 mediante CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <style>
+  .item{
+    background: #AABABA;    
+    text-align: center;
+    height: 20em;
+  }
+  .title-item {
+    margin: 0;     
+    padding-top: 1em;
+    font-size: 5em;
+  }
+  </style>
+  </head>
+  <body>
+	<div class="container-fluid">
+	  <div class="row">
+        <div class="col">
+
+            <div class="jumbotron jumbotron-fluid">
+                <div id="container" class="px-5">
+                    <h3 class="display-4">Otros elementos</h3>
+                </div>
+            </div>
+
+            <!-- TABS CON INDICADORES -->
+            <div class="header header-standard">	 
+            <ul class="nav nav-tabs">
+              <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Introduccion">Ordenadores <span class="badge badge-info">18</span></a></li>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Catalogo">Periféricos <span class="badge badge-secondary">21</span></a></li>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Ayuda">Software</a></li>
+            </ul>
+            </div>
+            
+            
+        </div>
+    </div>
+	</div>	
+	
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos Grid: pistas y líneas</title>
+    <style>
+      body {
+          margin: 0;
+          font-family: Roboto, sans-serif;
+      }
+      h2 {
+          text-align: center;
+      }
+      .container {
+          display: inline-grid;
+          vertical-align: bottom;
+          width: 35vmin;
+          height: 35vmin;
+          margin: 20px auto;
+      }
+      .container-hor {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 10px 1fr) 10px;
+      }
+      .container-vert {
+          grid-template-columns: repeat(4, 10px 1fr) 10px;
+          grid-template-rows: repeat(3, 1fr);
+      }
+      .container-area {
+          grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .item {
+          font-size: 3vmin;
+      }
+      .container-hor .item {
+          margin: 5px 10px;
+      }
+      .container-vert .item {
+          margin: 10px 5px;
+      }
+      .container-area .item {
+          margin: 5px;
+      }
+      .container-area .item:first-child {
+          grid-column-end: span 2;
+          grid-row-end: span 2;
+          background: #f0c0f0;
+          font-size: 1.5rem;
+      }
+      .container-hor .line {
+          background-image: linear-gradient(90deg, lightblue, #f04040, lightblue);
+          grid-column-end: span 4;
+      }
+      .container-vert .line {
+          background-image: linear-gradient(lightblue, #f04040, lightblue);
+          grid-row-end: span 4;
+      }
+      
+      
+
+      .legend span {   
+          display: inline-block;
+          padding: 5px;
+      }
+      
+      .cont-colors {   
+          border: 5px solid navy;
+          background: aquamarine;
+      }
+      .cont-fauxcolors {   
+          border: 5px solid navy;
+          background: lightblue;
+      }
+
+      .item-colors {
+          background: aquamarine;
+      border:  solid teal;
+      border-width: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplos Grid</h1>
+    <div class="legend">
+      <span class="cont-fauxcolors"></span> Contenedor <br>
+      <span class="item-colors"></span> Elemento
+    </div>
+    <div class="container container-hor cont-colors">
+      <div class="line"></div>
+      <div class="item item-colors">1</div>
+      <div class="item item-colors">2</div>
+      <div class="item item-colors">3</div>
+      <div class="item item-colors">4</div>
+      <div class="line"></div>
+      <div class="item item-colors">5</div>
+      <div class="item item-colors">6</div>
+      <div class="item item-colors">7</div>
+      <div class="item item-colors">8</div>
+      <div class="line"></div>
+      <div class="item item-colors">9</div>
+      <div class="item item-colors">0</div>
+      <div class="line"></div>
+    </div>
+    <div class="container container-vert cont-colors">
+      <div class="line"></div>
+      <div class="item item-colors">1</div>
+      <div class="line"></div>
+      <div class="item item-colors">2</div>
+      <div class="line"></div>
+      <div class="item item-colors">3</div>
+      <div class="line"></div>
+      <div class="item item-colors">4</div>
+      <div class="line"></div>
+      <div class="item item-colors">5</div>
+      <div class="item item-colors">6</div>
+      <div class="item item-colors">7</div>
+      <div class="item item-colors">8</div>
+      <div class="item item-colors">9</div>
+      <div class="item item-colors">0</div>
+    </div>
+
+    <div class="container container-area cont-fauxcolors">
+      <div class="item item-colors">El área de este elemento ocupa 4 celdas</div>
+      <div class="item item-colors">2</div>
+      <div class="item item-colors">3</div>
+      <div class="item item-colors">4</div>
+      <div class="item item-colors">5</div>
+      <div class="item item-colors">6</div>
+      <div class="item item-colors">7</div>
+      <div class="item item-colors">8</div>
+      <div class="item item-colors">9</div>
+    </div>
+
+  </body>
+</html>

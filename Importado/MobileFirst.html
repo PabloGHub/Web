@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=50%, initial-scale=1">
+<title>Media Queries - Mobile First</title>
+<style>
+ body { font-family:"Lucida Sans", sans-serif }
+ code { font-weight:bold; font-size:large; }
+ div {
+	border: 1px solid black;
+	padding: 1%;
+	margin: 1%;
+	width: 96%; 
+ }
+
+ ul { padding: 0}
+ li { display: inline; }
+
+ #Cabecera { background-color:#CEF600; }
+ #Enlaces { width: auto; background-color:#CEF6EC; }
+ #Contenido { width: auto; background-color:#CEE500; }
+ #Publicidad { display:none; background-color:#C1F6EC;}
+
+@media screen and (min-width: 481px) {
+    li { display: block; }
+	#Enlaces { width: 20%; float:left }
+    #Contenido { width: 70%; float:left }
+    #Publicidad { display: none }
+}
+ 
+@media screen and (min-width: 801px) {
+    li { display: block; }
+	#Enlaces { width: 18%; float: left; }
+    #Contenido { width: 56%; float: left; }
+    #Publicidad { display: block;width : 12%; float:right;}
+}
+
+@media screen and (min-width: 1440px) {
+	body { width: 1440px; margin: auto }
+}
+
+</style>
+</head>
+
+<body>
+ <div id="Cabecera"><p><code>#Cabecera</code><p>Enfoque Mobile First</div>
+ <div id="Enlaces">
+  <ul><li><code>#Enlaces</code></li>
+    <li><a href="">Principal</a></li>
+    <li><a href="">Sección 1</a></li>
+    <li><a href="">Sección 2</a></li>
+  </ul>
+ </div>
+ <div id="Contenido">
+  <p><code>#Contenido</code><p>Esta sería el área de contenido principal del sitio web.</p>
+ </div>
+ <div id="Publicidad">
+   <p><code>#Publicidad</code><p>Enlaces publicitarios</p>
+ </div>
+</body>
+
+</html>

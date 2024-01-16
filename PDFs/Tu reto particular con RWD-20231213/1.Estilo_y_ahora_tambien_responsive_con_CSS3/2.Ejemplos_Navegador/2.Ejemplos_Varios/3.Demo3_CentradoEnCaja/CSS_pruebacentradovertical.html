@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DIV centrado vert. y horiz.</title>
+	<style>
+	.contenedor
+	{
+		width:500px;
+		height:300px;
+                /* En el contenedor fija la altura (desde
+                   arriba) donde empezar a mostrar elementos */
+		line-height:300px;
+		border:1px solid;
+		text-align:center;
+	}
+	.contenedor>p {
+		display:inline-block;
+		vertical-align:middle;
+                /* Fija un interlineado simple
+                   para el párrafo */
+		line-height:normal;
+	}
+	</style>
+</head>
+<body>
+	<div class='contenedor'>
+		<p>Texto centrado en<br>horizontal y vertical</p>
+	</div>
+</body>
+</html>
+
+

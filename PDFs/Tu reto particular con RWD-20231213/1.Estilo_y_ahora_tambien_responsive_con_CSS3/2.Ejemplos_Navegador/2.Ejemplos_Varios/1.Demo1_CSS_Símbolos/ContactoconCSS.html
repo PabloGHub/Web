@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bloque Contacto con CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html {
+        font-family:Roboto, Arial;
+      }
+      ul {
+        list-style-type:none; 
+      }
+      a {
+        text-decoration:none; 
+      }
+      a[href^="https"]::before {
+        content: "🔗 ";
+      }
+      a[href^="mailto"]::before {
+        content: "📧 ";
+      }
+      a[href^="tel"]::before {
+        content: "📞 ";
+      }
+      li {
+        margin-bottom: .5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Para contactar conmigo:</p>
+    <ul>
+      <li><a href="https://ejemplo.com">Sitio Web</a></li>
+      <li><a href="mailto:primero.dam@safa.edu">Email</a></li>
+      <li><a href="tel:+123456789">Teléfono</a></li>
+    </ul>
+  </body>
+</html>

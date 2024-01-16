@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo Flexbox: ¿es además o en vez de?</title>
+    <style>
+.box {
+    font-family: 'Courier New', Courier, monospace;
+    border: 4px solid blue;
+    color: blue;
+}
+@supports (display: flex) {
+    .box {
+        border: 4px solid red;
+        color: red;
+    }
+}
+</style>
+  </head>
+  <body>  
+
+<div class="box">
+    Si el navegador soportara el feature-query para flexbox, el texto aparecerá en rojo.
+</div>
+</body>
+</html>

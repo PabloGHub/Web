@@ -1,0 +1,56 @@
+<DOCTYPE html>
+<html lang="es">
+<head>
+   <title>Modifica parámetros BS5 (10)</title>
+   <meta charset="UTF-8">
+   <!-- Bootstrap 5 mediante CDN versión 5.3 para poder utilizar nuevos colores predeterminados -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<!-- Se propone el cambio de color de fondo que ya traen los controles del formulario. -->
+<body>
+
+<!-- Contenedor principal -->
+<div class="container py-4">
+
+  <!-- Comienzo del formulario form -->
+  <form id="contactForm">
+
+    <!-- Cabecera del formulario -->
+    <div class="mb-3">
+      <p class="h1 fw-bold text-center bg-secondary">TÍTULO DEL FORMULARIO</p>
+    </div>
+
+    <!-- Control Nombre -->
+    <div class="mb-3">
+      <label class="form-label" for="nombre">Nombre</label>
+      <input class="form-control bg-warning" id="floNombre" type="text" placeholder="Nombre">
+      
+    </div>
+    <!-- Control Edad -->
+    <div class="mb-3">
+      <label class="form-label" for="edad">Edad</label>
+      <input class="form-control bg-primary-subtle" id="edad" type="number" placeholder="Edad" min="0" max="120"/>
+    </div>
+
+    <!-- Control Email -->
+    <div class="mb-3">
+      <label class="form-label" for="dirEmail">Dirección Email</label>
+      <input class="form-control bg-warning-subtle" id="dirEmail" type="email" placeholder="Dirección Email" />
+    </div>
+
+    <!-- Control Mensaje -->
+    <div class="mb-3">
+      <label class="form-label" for="mensaje">Mensaje</label>
+      <textarea class="form-control bg-info-subtle" id="mensaje" type="text" placeholder="Mensaje" style="height: 10rem;"></textarea>
+    </div>
+
+    <!-- Botón Envío Datos Formulario -->
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+    </div>
+
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos Flexbox: Cuadrículas flexibles</title>
+    <style>
+      body {
+          font-family: Roboto, sans-serif;
+      }
+      
+      .rwd {
+          width: 600px;
+          height: 700px;
+          display: flex;
+          flex-flow: column wrap;
+          font-size: 20px;
+          /*animation: 16s ease 1s infinite resize-h;*/
+      }
+      @keyframes resize-h {
+          25% { width: 300px; }
+          50% { width: 300px; }
+          75% { width: 600px; }
+      }
+      header {
+          background: lightblue;
+          text-align: center;
+          padding: 2rem;
+      }
+      main {
+          /*flex: 1;*/
+          /*display: flex;*/
+          /*flex-flow: row wrap;*/
+      }
+      nav {
+          padding: 2rem;
+          background: #f0f0f0;
+          /*flex: 1;*/
+      }
+      .content {
+          padding: 2rem;
+          background: #e0e0e0;
+          /*flex: 1;*/
+      }
+      .comentario {
+          padding: 2rem;
+          background: #0e0e0e;
+          color: #ffffff;
+      }
+      footer {
+          padding: 2rem;
+          background: #f09090;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplos Flexbox: Página Información</h1>
+    <div class="rwd">
+      <header>Cabecera</header>
+      <main>
+        <nav>Navegación</nav>
+        <div class="content">
+          Cuerpo principal: ocupa la altura y anchura disponibles, pese a que su contenido no tenga la extensión necesaria
+        </div>
+      </main>
+      <div class="comentario">
+          Comentario
+      </div>
+      <footer>Pie de página</footer>
+    </div>
+  </body>
+</html>

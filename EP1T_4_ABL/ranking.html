@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="imag/indice.ico">
+    <title>Indice</title>
+
+    <!-- Documentos de CSS -->
+    <link rel="stylesheet" href="css/navegacion.css">
+    <link rel="stylesheet" href="css/ranking.css">
+
+    <!-- Importacion JQGRID -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+
+
+    <!-- SCRIPT TABLA -->
+    <script>
+        $(function()
+        { 
+            "use strict";
+            $("#grid").jqGrid(
+            {
+                colModel: 
+                [
+                    { name: "interprete", label: "Intérprete", width: 140 },
+                    { name: "cancion", label: "Canción", width: 140 },
+                    { name: "ndescargas", label: "Nº Descargas", align: "right", width: 140, sorttype: "number" },
+                    { name: "precio", label: "Precio", width: 80, sorttype: "float"},
+                    { name: "versionado", label: "Versionado", template: "booleanCheckbox", align:"center", width: 80 },
+                    { name: "ultDescarga", label: "Últ. Descarga" }
+                ],
+                data: 
+                [
+                    { interprete: "Joan Manuel Serrat", cancion: "Mediterráneo", ndescargas: 1334987, precio: 1.25, versionado: false, ultDescarga: "02-Sep-2021" },
+                    { interprete: "Natalia Dicenta", cancion: "Summerrime", ndescargas: 827994, precio: 1.05, versionado: true, ultDescarga: "12-Oct-2021" },
+                    { interprete: "Andrea Motis Quartet", cancion: "He's funny that way", ndescargas:  672910, precio: 0.80, versionado: true, ultDescarga: "28-Jul-2021" },
+                    { interprete: "Los Ronaldos", cancion: "Adiós Papá", ndescargas:  513845, precio: 1.00, versionado: false, ultDescarga: "05-Aug-2021" },
+                    { interprete: "Pablo Alborán", cancion: "Inséparables", ndescargas:  421990, precio: 0.90, versionado: false, ultDescarga: "14-May-2021" },
+                    { interprete: "Rozalén", cancion: "80 veces", ndescargas:  355682, precio: 0.95, versionado: false, ultDescarga: "30-Aug-2021" },
+                    { interprete: "Pedro Guerra", cancion: "niños", ndescargas:  202347, precio: 1.15, versionado: false, ultDescarga: "23-Jul-2021" },
+                    { interprete: "Rosalia", cancion: "Me quedo contigo", ndescargas:  117906, precio: 1.20, versionado: true, ultDescarga: "31-Jul-2021" },
+                ],
+                pager: '#jqGridPager',
+                rowNum: 5, // No me funciona no se porque
+                viewrecords: true,
+                gridview: true
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav><!-- NAV / MENU -->
+
+        <div class="div_menu">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Novedades</a></li>
+                <li><a href="top3.html">Top 3</a></li>
+                <li><a href="interpretes.html">Intérpretes</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+            <button class="b_sus rojo" src="formulario.html" onclick="sus()">¡Suscríbete!</button>
+        </div>
+    </nav>
+        
+
+    <h1>Ranking de la revista +Descargados</h1>
+    <div class="TablaJQ">
+        <table id="grid" witdh="190px"></table>
+        <div id="jqGridPager"></div>
+    </div>
+    <br><br>
+
+
+    <footer> <!-- FOOTER / PIE DE PAGINA -->
+        <div class="div_menu">
+            <ul class="menu">
+                <li><a href="">Avíso legal</a></li>
+                <li><a href="">Política de privacidad</a></li>
+                <li><a href="">Política de cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <Script src="JavaScript/IrFormulario.js"></Script>
+
+</body>
+
+</html>

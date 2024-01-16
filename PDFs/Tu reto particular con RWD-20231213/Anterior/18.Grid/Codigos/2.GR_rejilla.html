@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <title>Ejemplo Grid: cuadrícula simple</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            margin: 0;
+            font-size: 18px;
+            font-family: Roboto, sans-serif;
+        }
+        header {
+            grid-column-end: span 12;
+            background: lightblue;
+            text-align: center;
+            padding: 2rem;
+        }
+        nav {
+            grid-column-end: span 12;
+            grid-row: 1 / 2;
+            padding: 1rem 2rem;
+            text-align: right;
+            background: #e0e0e0;
+        }
+        h2 {
+            max-width: 60rem;
+            font-size: calc(2rem + 2vw);
+            font-weight: 300;
+        }
+        .cont-feat {
+            grid-column-end: span 12;
+            display: flex;
+            flex-flow: row wrap;
+            
+        }
+        .feature {
+            flex:1;
+            justify-content: stretch;
+            padding: 2rem;
+            background: #ffcccc;
+        }
+        .half {
+              grid-column-end: span 6;
+        }
+        .half p {
+            padding: 6rem;
+        }
+        .half img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+      }
+        .hero {
+            grid-column: 2 / -2;
+            padding: 2rem;
+        }
+        footer {
+            grid-column-end: span 12;
+            padding: 2rem;
+            text-align: center;
+            background: lightblue;
+        }
+        
+        @media screen and (max-width:992px) {
+          .cont-feat {
+            flex-flow: column nowrap;
+          }  
+        }
+
+        @media screen and (max-width:768px) {
+            .half {
+                grid-column-end: span 12;
+            }
+            .feature {
+                grid-column-end: span 6;
+            }
+        }
+        @media screen and (max-width:480px) {
+            .feature {
+                grid-column-end: span 12;
+            }
+        }
+        
+    </style>
+  </head>
+  <body> 
+    <header>
+      <h1>Página con cuadrícula con Grid</h1>
+    </header>  
+    <nav>
+      <a href="javascript:void(0);">Inicio</a>
+      <a href="javascript:void(0);">Sobre nosotros</a>
+      <a href="javascript:void(0);">Precios</a>
+    </nav>
+    <div class="hero">
+      <h2>El uso de CSS Grid en esta página es ilustrativo acerca de cómo replicar una cuadrícula básica</h2>
+    </div>
+    <div class="cont-feat">
+        <div class="feature">
+            <h3>Una ventaja</h3>
+        <p>de CSS Grid es poder personalizar el número de columnas de la rejilla y su tamaño.</p>
+        </div>
+        <div class="feature">
+        <h3>Otra ventaja</h3>
+        <p>es liberar al marcado HTML de la información sobre la disposición de los elementos.</p>
+        </div>
+        <div class="feature">
+        <h3>Creatividad</h3>
+        <p>CSS Grid abre las puertas a sitios web más creativos que no se rijan por los diseños típicos.</p>
+        </div>
+        <div class="feature">
+        <h3>Experimentación</h3>
+        <p>es necesaria para llegar a construir diseños innovadores con CSS Grid.</p>
+        </div>
+    </div>
+    <div class="half">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis, felis ultrices auctor cursus, lacus sem iaculis tellus, sit amet euismod ex nunc interdum eros. Etiam fermentum consequat tempor. Donec quis pharetra risus. Cras eu ipsum eget velit tristique pharetra non non lorem. Mauris fringilla eros id efficitur iaculis. Vestibulum enim quam, venenatis eu tempor vitae, pretium at ligula. Praesent nulla orci, pellentesque sit amet tempor at, porta a ligula.</p>
+    </div>
+    <div class="half">
+      <img src="https://placeimg.com/300/150/nature/grayscale">
+    </div>
+    <div class="half">
+      <img src="https://placeimg.com/300/150/animals/grayscale">
+    </div>
+    <div class="half">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis, felis ultrices auctor cursus, lacus sem iaculis tellus, sit amet euismod ex nunc interdum eros. Etiam fermentum consequat tempor. Donec quis pharetra risus. Cras eu ipsum eget velit tristique pharetra non non lorem. Mauris fringilla eros id efficitur iaculis. Vestibulum enim quam, venenatis eu tempor vitae, pretium at ligula. Praesent nulla orci, pellentesque sit amet tempor at, porta a ligula.</p>
+    </div>
+    <footer>
+      Contenido del pie de página
+    </footer>
+  </body>
+</html>

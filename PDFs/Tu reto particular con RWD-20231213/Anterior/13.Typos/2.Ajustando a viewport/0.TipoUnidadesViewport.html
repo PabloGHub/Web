@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Tipografía - Unidades viewport</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { 
+     font-family:Arial, Helvetica, sans-serif;
+	 font-size: 2.5vw;
+}
+h1 {font-size: 10vmin; }
+h2 {font-size: 8vmin; }
+
+@media (max-width: 720px)  { body {font-size: 4vw;} } 
+
+</style>
+</head>
+
+<body>
+<h1>Encabezado de nivel 1</h1>
+<p>Para utilizar Bootstrap en un proyecto propio existen fundamentalmente dos alternativas: el enlace directo a los módulos CSS y JavaScript de Bootstrap a través del CDN correspondiente, una opción válida si la configuración por defecto resulta adecuada, o bien descargar dichos módulos a nuestro equipo de desarrollo a fin de personalizarlos y, finalmente, alojarlos en el mismo servidor que el sitio web.</p>
+
+<p>De optarse por la segunda alternativa, en la web de Bootstrap encontraremos tres opciones distintas de descarga. La primera nos facilita Bootstrap preparado para su uso, incluyendo la hoja de estilos (en versión editable y reducida), un tema visual por defecto y el módulo JavaScript. Con la segunda obtendremos el código fuente Less con el que se construye Bootstrap, lo cual nos aporta más flexibilidad para introducir personalizaciones. La tercera es similar a la anterior, pero con el código fuente en formato Sass en lugar de Less.</p>
+
+<h2>Encabezado de nivel 2</h2>
+<p>Si optas por la descarga de Bootstrap, a fin de servir los módulos desde el mismo servidor que tu aplicación, al descomprimir el archivo encontrarás en ella tres carpetas: css, fonts y js. En la primera encontraremos la hoja de estilos de Bootstrap, tanto en versión editable (bootstrap.css) como minimizada (bootstrap.min.css), así como el tema visual básico de Bootstrap. En la segunda están los tipos de letra asociados al citado tema visual. No los necesitarás a menos que emplees el estilo en tu sitio. La última aloja el módulo JavaScript.</p>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/*--- GLOBALES ---*/
+p
+{
+    text-align: justify;
+    font-family: 'Montserrat-Regular';
+}
+
+h1
+{
+    text-align: center;
+    font-family: 'Montserrat-Black';
+    font-size: 2.5rem;
+}
+
+
+/*--- CLASES E IDES ---*/
+/*Clases*/
+.cuepo_externo_div > img
+{
+    width: 100%;
+}
+
+.cuepo_interno_div
+{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3.5rem;
+    /*align-items: center;*/
+
+}
+
+.cuepo_externo_div
+{
+    max-width: 70%;
+    margin-left: 15%;
+}
+
+.top3
+{
+    text-decoration:none;
+    color: #F81D44;
+}
+
+.imagen_internas
+{
+    /*Da algunos problemas por eso lo eh quitado*/
+    /*max-width: 450px;*/
+
+    width: 100%;
+}
+
+.imagen_internas:hover
+{
+    transform: scale(1.05);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+/*
+.izquierda, .derecha 
+{
+    padding: 30px;
+}
+*/

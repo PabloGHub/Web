@@ -1,0 +1,52 @@
+<DOCTYPE html>
+<html lang="es">
+<head>
+   <title>Modifica parámetros BS5 (5)</title>
+   <meta charset="UTF-8">
+   <!-- Bootstrap 5 mediante CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+<!-- Se utilizan las clases "h1" (sustituye la etiqueta h1), "fw-bold" (aplica negrita) y "text-center" (para centrar el texto del título en el contenedor)  -->
+<!-- Se utilizan las clases "btn" (para formatearlo como botón BS5), "btn-primary" (para darle el color azul BS5) y "btn-lg" (para indicar que es botón grande[lg]) -->
+<body>
+
+<!-- Contenedor principal -->
+<div class="container py-4">
+
+  <!-- Comienzo del formulario form -->
+  <form id="contactForm">
+
+    <!-- Cabecera del formulario -->
+    <div class="mb-3">
+        <p class="h1 fw-bold text-center">TÍTULO DEL FORMULARIO</p>
+    </div>
+
+    <!-- Control Nombre -->
+    <div class="mb-3">
+      <label class="form-label" for="nombre">Nombre</label>
+      <input class="form-control" id="nombre" type="text" placeholder="Nombre" />
+    </div>
+    <!-- Control Edad -->
+    <div class="mb-3">
+      <label class="form-label" for="edad">Edad</label>
+      <input class="form-control" id="edad" type="number" placeholder="Edad" min="0" max="120"/>
+    </div>
+    <!-- Control Email -->
+    <div class="mb-3">
+      <label class="form-label" for="dirEmail">Dirección Email</label>
+      <input class="form-control" id="dirEmail" type="email" placeholder="Dirección Email" />
+    </div>
+    <!-- Control Mensaje -->
+    <div class="mb-3">
+      <label class="form-label" for="mensaje">Mensaje</label>
+      <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje" style="height: 10rem;"></textarea>
+    </div>
+    <!-- Botón Envío Datos Formulario -->
+    <!-- Se aplica a este control botón la clase "d-grid" para, aparte de separarla de lo anterior, conseguir que el botón sea responsive -->
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

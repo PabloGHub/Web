@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tipografía Bootstrap 4</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	</style>
+  </head>
+  <body>
+	<div class="container">
+	 <div class="row">
+		 <div class="col-4">
+			<h1>Tipografía con Bootstrap 4 <small>Niveles de título</small></h1>
+			<p>Los párrafos de texto básico en Bootstrap utilizan un tamaño de 14 píxeles y tienen un margen inferior que separa visualmente unos párrafos de otros.</p>
+			<p>Es posible destacar cualquier párrafo de texto simplemente añadiéndole la clase <code>lead</code> (el término anterior se ha destacado con la marca <code>&lt;code&gt;</code>), como se ha hecho con el siguiente:</p>
+			<p class="lead">Los párrafo de texto destacados usan una tipografía de mayor tamaño, lo cual les hace destacar rápidamente entre el resto del texto.</p>
+			<h2>Estilos para textos <small>Elementos inline</small></h2>
+			<p>Además de los habituales elementos <code>strong</code>, <code>em</code> o <code>u</code>, con los que introduciríamos texto en <strong>negrita</strong>, <em>cursiva</em> y <u>subrayado</u>, también pueden utilizarse <code>ins</code> para destacar un texto como <ins>añadido</ins> o <code>del</code> para mostrarlo como <del>eliminado</del>.
+			<p>Mediante el elemento <code>address</code> es posible dar formato a un texto para que aparezca como una dirección, por ejemplo:</p>
+			<address>
+			  <strong>CampusMVP</strong><br>
+			  Avda. de Madrid 18</br>
+			  Vigo, Spain
+			</address>
+			<p>El elemento <code>blockquote</code>, para introducir citas, puede contener un elemento <code>footer</code> para diferenciar las referencias, por ejemplo:</p>
+			<blockquote>
+			 <p>What an astonishing thing a book is.</p>
+			 <footer>Carl Sagan</footer>
+			</blockquote>
+			<h2>Estilos para código, comandos y resultados</h2>
+			<p>Para dar instrucciones a un usuario puede utilizarse el estilo <code>kbd</code>, indicándole qué <kbd>combinaciones</kbd>+<kbd>de</kbd>+<kbd>teclas</kbd> tiene que usar.</p>
+            <p>Para destacar los nombres de variable se puede usar el elemento <code>var</code>: la variable <var>min</var> contendrá el menú valor de la serie.</p>
+			<p>La salida <samp>resultante de un comando</samp> puede resaltarse con el elemento <code>samp</code>
+			<p>También pueden introducirse porciones de texto con formato previo, habitualmente para mostrar código de ordenador, usando para ello el elemento <code>pre</code>. Por ejemplo:</p>
+			<pre>
+normalize <- function(x) {
+   x <- sweep(x, 2, apply(x, 2, min))
+   x <- sweep(x, 2, apply(x, 2, max), "/")
+   2*x - 1
+}			</pre>
+            <h2>Transformaciones y alineaciones <small>Selectores de clase</small></h2>
+			<p>La alineación del texto se determina asignando a los elementos el selector de clase adecuado: <code>text-left</code>, <code>text-right</code>, <code>text-center</code>, <code>text-justify</code> o <code>text-nowrap</code>, por ejemplo:</p>
+			<p class="text-right">Texto ajustado a la derecha</p>
+			<p class="text-center">Texto centrado</p>
+			<p class="text-left">Texto ajustado a la izquierda</p>
+			<p class="text-justify">Texto justificado, de forma que se ajusta cada línea del párrafo a ambos márgenes.</p>
+			<p class="text-nowrap">Texto sin ajuste y que no se dividirá al llegar al final del espacio disponible en el ancho de párrafo, continuando hasta incluso salir de la ventana del navegador.</p>
+			<p>Mediante selectores de clase también es posible aplicar transformaciones al texto contenido en un elemento. Para ello se utilizan clases como <code>text-lowercase</code>, <code>text-uppercase</code> y <code>text-capitalize</code>, para convertir a minúsculas, mayúsculas o poner en mayúscula la inicial de cada palabra, respectivamente.</p>
+         </div>
+	 </div>
+	</div>
+  </body>
+</html>

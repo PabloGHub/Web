@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.cajatexto {
+  padding: 20px;
+  color: white;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+/* Dispositivos muy pequeños (por debajo de 600px [móviles]) */
+@media only screen and (max-width: 600px) {
+  .cajatexto {background: red; font-style:normal;}
+}
+
+/* Dispositivos pequeños  (igual o por encima de 600px [móviles grandes y minitablets]) */
+@media only screen and (min-width: 600px) {
+  .cajatexto {background: green; font-style:italic;}
+}
+
+/* Dispositivos medianos (igual o por encima de 768px [tablets]) */
+@media only screen and (min-width: 768px) {
+  .cajatexto {background: blue; font-weight:bold;}
+} 
+
+/* Dispositivos grandes (igual o por encima de 992px [portátiles/escritorio]) */
+@media only screen and (min-width: 992px) {
+  .cajatexto {background: orange; font-style:normal;}
+} 
+
+/* Dispositivos muy grandes (igual o por encima de 1200px [portátiles/escritorio grandes]) */
+@media only screen and (min-width: 1200px) {
+  .cajatexto {background: pink; font-weight:normal;}
+}
+</style>
+</head>
+<body>
+
+<h2>Puntos de ruptura habituales para media queries</h2>
+<p class="cajatexto">A medida que vayas estrechando la anchura de la ventana del navegador observarás cómo el fondo de la caja que contiene el texto va cambiando de color y el estilo de la letra en función de esos tamaños.</p>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+/*--- IMPORTAR FUENTES ---*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@font-face 
+{
+    font-family: 'Montserrat-Black';
+    src: url('../montserrat/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Pacifico-Regular';
+    src: url('../fuentes/Pacifico-Regular.ttf');
+}
+
+/*--- GLOBALES ---*/
+nav, footer
+{
+    background-color: #24252A;
+    margin: 0px 0px 10px 0px;
+
+    text-align: right;
+    font-family: 'Raleway', sans-serif;
+    height: 60px;
+}
+
+footer > .div_menu > .menu > *
+{
+    margin-left: 26%;
+    margin-right: -26%;
+} 
+
+p
+{
+    text-align: justify;
+    font-family: 'Montserrat-Regular';
+}
+
+/*--- CLASES E IDES ---*/
+/*Clases*/
+.b_sus
+{
+    background-color: #F81D44;
+    border: 0ch;
+    border-radius: 50px;
+
+    font-size: 1rem;
+    color: #fff;
+    font-family: "Raleway";
+    
+    padding: 8px;
+    margin: 12px 12px 0px 12px;
+}
+
+.b_sus:hover
+{
+    transform: scale(1.20);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.menu
+{
+    margin: 0% 10% 0% 0%;
+
+    /*
+        padding: 0px 20px 0px 20px;
+        list-style: none;
+        float: left;
+    */
+}
+
+.menu > * 
+{
+    padding: 20px 20px 0px 20px;
+    list-style: none;
+    float: left;
+}
+
+.menu > * > * 
+{
+    text-decoration:none;
+    color: #fff;
+    font-family: "Raleway";
+}
+
+.div_menu
+{
+    width: 70%;
+    margin-left: 15%;
+}
+
+/*Ides*/

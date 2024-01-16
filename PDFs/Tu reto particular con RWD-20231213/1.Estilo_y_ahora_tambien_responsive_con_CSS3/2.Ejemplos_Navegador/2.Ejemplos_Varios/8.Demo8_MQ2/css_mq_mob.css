@@ -1,0 +1,15 @@
+body {
+font-family:Arial, sans-serif; 
+margin:auto;}
+section {max-width:500px;}
+header {
+background-image:url('head_mobile.jpg'); 
+background-repeat:no-repeat; 
+height:150px; 
+padding:10px; 
+margin:auto; 
+color:#ffffff; 
+font-weight:bold; }
+article {
+width:95%; 
+padding:2%;}

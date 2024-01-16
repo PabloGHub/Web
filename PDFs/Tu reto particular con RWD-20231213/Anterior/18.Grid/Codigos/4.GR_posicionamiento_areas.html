@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo Grid: cartel de evento</title>
+    <style>
+      body {
+          margin: 0;
+          background: #6040b0;
+      }
+      main {
+          display: grid;
+          grid-gap: 10px;
+          grid-template-areas:
+            "footer .   desc desc  ."
+            ".      .   desc desc  ."
+            "img    img .    .     attend"
+            "img    img .    date  ."
+            ".      .   .    title title";
+          grid-template-areas:
+            "title  title .   .    ."
+            ".      date  .   desc desc"
+            "attend .     .   desc desc"
+            ".      img   img .    ."
+            ".      img   img .    footer";    
+          grid-auto-columns: 1fr;
+          grid-auto-rows: 1fr;
+          margin: 0 auto;
+          min-height: 100vh;
+          max-width: 1024px;
+          font-size: 24px;
+          font-family: Roboto, sans-serif;
+          color: #303000;
+      }
+      main > * {
+          background: #f0f0a0;
+          padding: 2rem;
+          margin: 0;
+      }
+      a {
+          color: inherit;
+      }
+      .img {
+          grid-area: img;
+          background-image: url(jimmy-chang.jpg);
+          background-size: cover;
+      }
+
+          h1 {
+              grid-area: title;
+          }
+          time {
+              grid-area: date;
+          }
+          .desc {
+              grid-area: desc;
+          }
+          .attend {
+              grid-area: attend;
+          }
+          footer {
+              grid-area: footer;
+          }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Título del evento</h1>
+      <p class="desc">
+        Descripción del evento que convocamos con este creativo cartel.
+      </p>
+      <div class="img"><!-- Imagen de Jimmy Chang en Unsplash --></div>
+      <time datetime="9090-01-01 20:20:20">Día 1 a las 20:20</time>
+      <a href="javascript:void(0);" class="attend">Registra tu asistencia</a>
+      <footer>
+        Organizado por CampusMVP
+      </footer>
+    </main>
+  </body>
+</html>

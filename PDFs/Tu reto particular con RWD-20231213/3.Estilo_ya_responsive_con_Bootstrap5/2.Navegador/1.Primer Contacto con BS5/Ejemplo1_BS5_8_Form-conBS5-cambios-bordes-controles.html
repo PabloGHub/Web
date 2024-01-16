@@ -1,0 +1,60 @@
+<DOCTYPE html>
+<html lang="es">
+<head>
+   <title>Modifica parámetros BS5 (8)</title>
+   <meta charset="UTF-8">
+   <!-- Bootstrap 5 mediante CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+<!-- Se propone el cambio de color de los bordes de los controles del formulario. Para ello está la clase "border-xxxxxxx" 
+    donde xxxxxxx se sustituye por primary, secondary, etc., que se aplica a cada control.-->
+<!-- También el grosor de dichos bordes. Para ello está la clase "border-x" donde x es el tipo numérico asociado a los diferentes grosores border-3 -->
+<!-- Por último, podemos redondear estos bordes. Era de esperar que la clase "rounded(-xxxxxx)" se encargara de ello, donde xxxxxx se sustituye 
+    por nada/top/end/bottom/start/circle/pill. Además se puede aplicar más o menos redondeo a los bordes utilizando la clase "rounded-x" donde x 
+    se sustituye por el tipo (0 al 3). -->
+<body>
+
+<!-- Contenedor principal -->
+<div class="container py-4">
+
+  <!-- Comienzo del formulario form -->
+  <form id="contactForm">
+
+    <!-- Cabecera del formulario -->
+    <div class="mb-3">
+      <p class="h1 fw-bold text-center">TÍTULO DEL FORMULARIO</p>
+    </div>
+
+    <!-- Control Nombre -->
+    <div class="mb-3">
+      <label class="form-label" for="nombre">Nombre</label>
+      <input class="form-control" id="nombre" type="text" placeholder="Nombre" />
+    </div>
+
+    <!-- Control Edad -->
+    <div class="mb-3">
+      <label class="form-label" for="edad">Edad</label>
+      <input class="form-control" id="edad" type="number" placeholder="Edad" min="0" max="120"/>
+    </div>
+
+    <!-- Control Email -->
+    <div class="mb-3">
+      <label class="form-label" for="dirEmail">Dirección Email</label>
+      <input class="form-control" id="dirEmail" type="email" placeholder="Dirección Email" />
+    </div>
+
+    <!-- Control Mensaje -->
+    <div class="mb-3">
+      <label class="form-label" for="mensaje">Mensaje</label>
+      <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje" style="height: 10rem;"></textarea>
+    </div>
+
+    <!-- Botón Envío Datos Formulario -->
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+    </div>
+
+  </form>
+</div>
+</body>
+</html>

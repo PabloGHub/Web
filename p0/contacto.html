@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Contacto</title>
+		<meta charset="UTF-8"></meta>
+        <link rel="stylesheet" href="css/form-style.css">
+		<link rel="stylesheet" href="css/style.css">
+
+        <style>/* PARTE MIA PARA NO LIAR LA TRACA */
+
+            input[type="text"],
+            input[type="url"],
+            input[type="tel"],
+            input[type="email"],
+            input[type="date"],
+            input[type="number"]
+            {
+                width: 40%;
+            }
+
+            select
+            {
+                width: 40%;
+            } 
+
+        </style>
+
+	</head>
+	<body>
+		<nav> <!-- NAV -->
+			<a href="index.html#sobre-mi">Sobre mi</a>
+			<a href="https://www.youtube.com/@pcerismo/videos" target="_blank" rel="noopener noreferrer">Mi canal de youtube</a>
+			<a href="index.html" rel="noopener noreferrer">Portfolio</a>
+		</nav>
+
+		
+		<main id="formulario"> <!-- FORMULARIO / MAIN -->
+            <h2>Formulario de Contacto</h2>
+			
+            <form action="result.php" method="get"> <!-- https://guillemonas.synology.me:600/p0/result.php -->
+                <fieldset><!--------------------------- CLIENTE -->
+                    <legend>Cliente</legend>
+
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Introduce tu Nombre" required>
+
+                    <br>
+
+                    <label for="apellido">Apellidos:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Introduce tu Apellidos" required>
+                    
+                    <br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Introduce tu Email" required>
+
+                    <br>
+
+                    <label for="telefono">Telefono:</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Introduce tu Teléfono" max="9" maxlength="9" required>
+
+                </fieldset>
+
+
+                <fieldset><!----------------------------------- EMPRESA -->
+                    <legend>Empresa</legend>
+
+                    <label for="nombre-empresa">Nombre de la Empresa:</label>
+                    <input type="text" name="nombre-empresa" id="nombre-empresa" placeholder="Introduce la Empresa" required>
+
+                    <br>
+
+                    <label for="ulr-empresa">Pagina web official:</label>
+                    <input type="text" name="ulr-empresa" id="ulr-empresa" placeholder="Introduce URL de web" required>
+
+                    <br>
+
+
+                    <h4>Tamaño de la Empresa:</h4>
+
+                    <input type="radio" name="empresa" id="microempresa" value="Micro Empresa">
+                    <label for="empresa">Micro Empresa</label>
+                    <br>
+
+                    <input type="radio" name="empresa" id="pyme" value="PYME">
+                    <label for="empresa">PYME</label>
+                    <br>
+
+                    <input type="radio" name="empresa" id="granempresa" value="Gran Empresa">
+                    <label for="empresa">Gran Empresa</label>
+                    
+                    <!-- Gran Empresa -->
+                </fieldset>
+
+                
+                <fieldset><!-------------------------------------- PROYECTO -->
+                    <legend>Proyecto</legend>
+
+                    <label for="proyectos">Tipo de Proyecto:</label>
+                    <select name="proyectos" id="proyectos" required>
+
+                        <option value="gestor_contenido">Gestor de Contenidos</option>
+                        <option value="software_medida">Software a Medida</option>
+                        <option value="otro">Otros</option>
+
+                    </select>
+
+                    <br>
+
+                    <label for="descripcion">Descripcion de Proyecto</label>
+                    <textarea name="descripcion" id="descripcion" row="10" cols="30" placeholder="Escriba su Descripcion Aqui"></textarea>
+
+                    <br>
+
+                    <label for="entrega">Fecha de Entrega:</label>
+                    <input type="date" name="entrega" id="entrega" required>
+
+                    <br>
+
+                    <label for="presupuesto">Presupuesto:</label>
+                    <input type="number" name="presupuesto" id="Presupuesto" step="5000" min="5000" placeholder="Ponga su Presupuesto" required>
+
+                    <br>
+
+                    <label for="Adjunto">Adjunto:</label>
+                    <input type="file" name="Adjunto" id="Adjunto" placeholder="">
+
+                </fieldset>
+
+                <input type="hidden" name="Formulario Landig 2023" id="landig2023">
+
+                <input type="checkbox" name="casillla_de_privacidad" id="casillla_de_privacidad" required>
+                Casilla de Verificacion de Datos
+                <br><br>
+
+                <input type="reset" value="Borrar Todo">
+                <input type="submit" value="Enviar">
+            </form>
+
+		</main>
+
+		<footer><a target="_blank" href="https://www.youtube.com/@pcerismo/videos">PZero en Youtube</a></footer> <!-- PIE DE PAGINA -->
+	</body>
+</html>

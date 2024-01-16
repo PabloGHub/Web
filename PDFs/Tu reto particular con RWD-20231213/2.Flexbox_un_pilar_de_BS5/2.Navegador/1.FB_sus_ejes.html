@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos Flexbox: direction y wrap</title>
+    <style>
+      body {
+          margin: 0;
+          font-family: Roboto, sans-serif;
+          display: grid;
+          grid-template-columns: 15vw 1fr 1fr;
+      }
+      h2 {
+          text-align: center;
+      }
+      .container {
+          display: flex;
+          width: 35vmin;
+          height: 35vmin;
+          margin: 20px auto;
+      }
+      
+      .container-rn {
+          flex-flow: row nowrap;
+          animation: 4s ease 1s infinite resize-h;
+      }
+      .container-cn {
+          flex-flow: column nowrap;
+          animation: 4s ease 1s infinite resize-v;
+      }
+      .container-rw {
+          flex-flow: row wrap;
+          animation: 4s ease 1s infinite resize-h;
+      }
+      .container-cw {
+          flex-flow: column wrap;
+          animation: 4s ease 1s infinite resize-v;
+      }
+      @keyframes resize-h {
+          25% { width: 20vmin; }
+          50% { width: 20vmin; }
+          75% { width: 35vmin; }
+      }
+      @keyframes resize-v {
+          25% { height: 20vmin; }
+          50% { height: 20vmin; }
+          75% { height: 35vmin; }
+      }
+      
+      .item {
+          width: 5vmin;
+          height: 5vmin;
+          font-size: 3vmin;
+      }
+
+      .legend {
+          width: 80vmin;
+          margin: 0 auto;
+      }
+
+      .legend span {   
+          display: inline-block;
+          padding: 5px;
+      }
+      
+      .cont-colors {   
+          border: 5px solid navy;
+          background: lightblue;
+      }
+
+      .item-colors {
+          background: aquamarine;
+          border: 5px solid teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Ejemplos Flexbox</h1>
+      <div class="legend">
+        <span class="cont-colors"></span> Contenedor <br>
+        <span class="item-colors"></span> Elemento
+      </div>
+    </div>
+    <h2><code>flex-direction: row</code></h2>
+    <h2><code>flex-direction: column</code></h2>
+    <h2><code>flex-wrap: nowrap</code></h2>
+    <div class="container container-rn cont-colors">
+      <div class="item item-colors">1</div>
+      <div class="item item-colors">2</div>
+      <div class="item item-colors">3</div>
+      <div class="item item-colors">4</div>
+      <div class="item item-colors">5</div>
+      <div class="item item-colors">6</div>
+      <div class="item item-colors">7</div>
+      <div class="item item-colors">8</div>
+      <div class="item item-colors">9</div>
+      <div class="item item-colors">0</div>
+    </div>
+    <div class="container container-cn cont-colors">
+      <div class="item item-colors">1</div>
+      <div class="item item-colors">2</div>
+      <div class="item item-colors">3</div>
+      <div class="item item-colors">4</div>
+      <div class="item item-colors">5</div>
+    </div>
+    <h2><code>flex-wrap: wrap</code></h2>
+    <div class="container container-rw cont-colors">
+      <div class="item item-colors">1</div>
+      <div class="item item-colors">2</div>
+      <div class="item item-colors">3</div>
+      <div class="item item-colors">4</div>
+      <div class="item item-colors">5</div>
+      <div class="item item-colors">6</div>
+      <div class="item item-colors">7</div>
+      <div class="item item-colors">8</div>
+    </div>
+    <div class="container container-cw cont-colors">
+      <div class="item item-colors">1</div>
+      <div class="item item-colors">2</div>
+      <div class="item item-colors">3</div>
+      <div class="item item-colors">4</div>
+      <div class="item item-colors">5</div>
+      <div class="item item-colors">6</div>
+      <div class="item item-colors">7</div>
+      <div class="item item-colors">8</div>
+    </div>
+
+  </body>
+</html>

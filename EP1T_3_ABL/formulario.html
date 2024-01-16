@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="imag/indice.ico">
+        <title>Formulario</title>
+
+        <!-- Documentos de CSS -->
+        <link rel="stylesheet" href="css/navegacion.css">
+        <link rel="stylesheet" href="css/formulario.css">
+    </head>
+    <body>
+        <nav><!-- NAV / MENU -->
+
+            <div class="div_menu">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Novedades</a></li>
+                    <li><a href="top3.html">Top 3</a></li>
+                    <li><a href="interpretes.html">Intérpretes</a></li>
+                    <li><a href="">Ranking</a></li>
+                </ul>
+                <button class="b_sus rojo" src="formulario.html" onclick="sus()">¡Suscríbete!</button>
+            </div>
+        </nav>
+
+        <div class="div_cuerpo">
+            <h1><b>¡Música gratis durante 1 año!</b></h1>
+            <p>
+                ¿Te gustaría escuchar más música pero no quieres gastarte el dinero? <br>
+                ¡Ya no tienes excusa! Gana un año de discos <b>GRATIS</b> participando en nuestro sorteo. No esperes más, solo tienes que contarnos algo de ti y suscribirte ;)
+            </p>
+            <h2>¡Corre! Se acaba el tiempo. Tic...Tac..</h2>
+            
+            <div class="temp">
+                <div class="rojo"></div>
+                <div class="rojo"></div>
+            </div>
+
+            <form action="" method="post">
+                <fieldset>
+                    <h1 class="h1_par">Participa en el sorteo</h1>
+
+                    
+
+                    <div class="bor_total">
+                        <label for="nombre">NOMBRE*</label>
+                        <input type="text" placeholder="Introduce tu Nombre" name="nombre" required>
+                    </div>
+
+                    <div class="bor_total">
+                        <label for="mail">EMAIL*</label>
+                        <input type="text" placeholder="Introduce tu Email" name="mail" required>
+                    </div>
+
+                    <div class="bor_total">
+                        <label for="Ndispositivos">Nº DISPOSITIVOS*</label>
+                        <input type="number" placeholder="0" name="Ndispositivos" required>
+                    </div>
+
+                    <div class="bor_arab">
+                        <label for="descargas">DESCARGAS/MES:</label>
+                        <input type="range" value="10" name="descargas">
+                    </div>
+
+                    <div class="bor_arab">
+                        <label for="genero">GÉNERO MUSICAL:</label>
+                        <select name="genero" id="genero" required>
+
+                            <option value="clasica">Clásica</option>
+                            <option value="rock">Rock</option>
+
+                        </select>
+                    </div>
+
+                    <div class="bor_arab">
+                        <label for="nacimiento">FECHA NACIMIENTO:</label>
+                        <input type="date" name="nacimiento">
+                    </div>
+
+                    <div class="bor_arab">
+                        <label for="color">COLOR PREFERIDO:</label>
+                        <input type="color" name="color" class="color">
+                    </div>
+
+                    <input type="checkbox" name="terminos" id="">
+                    <label for="terminos" class="politica">*He leído y acepto la política de privacidad</label>
+
+                    <br>
+                    <input type="submit" value="Enviar" class="Benviar">
+                </fieldset>
+            </form>
+
+        </div>
+
+        <br>
+
+        <footer> <!-- FOOTER / PIE DE PAGINA -->
+            <div class="div_menu">
+                <ul class="menu">
+                    <li><a href="">Avíso legal</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                    <li><a href="">Política de cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <Script>
+            function sus()
+            {
+                window.location.assign("formulario.html");
+                //<button class="b_sus" src="formulario.html" onclick="sus()">¡Suscríbete!</button>
+            }
+        </Script>
+
+    </body>
+</html>

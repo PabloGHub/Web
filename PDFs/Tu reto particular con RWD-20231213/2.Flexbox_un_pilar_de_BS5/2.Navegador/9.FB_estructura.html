@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplos Flexbox: estructura flexible</title>
+    <style>
+      body {
+              display: flex;
+              flex-flow: column nowrap;
+          margin: 0;
+          font-size: 18px;
+          font-family: Roboto, sans-serif;
+          min-height: 100vh;
+      }
+      /*body {
+          margin: 0;
+          font-size: 18px;
+          font-family: Roboto, sans-serif;
+          min-height: 100vh;
+      }*/
+      .wrapper {
+              flex: 1;
+              display: flex;
+              flex-flow: row wrap;
+            max-width: 80rem;
+            margin: 0 auto;
+      }
+      /*.wrapper {
+          max-width: 80rem;
+          margin: 0 auto;
+      }*/
+      header {
+          background: lightblue;
+          text-align: center;
+          padding: 2rem;
+      }
+      nav {
+          padding: 1rem 2rem;
+          text-align: center;
+          background: #e0e0e0;
+      }
+      aside {
+              flex: 1 10rem;
+          padding: 2rem;
+          background: #e0e0e0;
+      }
+      /*aside {
+          padding: 2rem;
+          background: #e0e0e0;
+      }*/
+      main {
+              flex: 3 40rem;
+          padding: 2rem;
+          background: #f0f0f0;
+      }
+      /*main {
+          padding: 2rem;
+          background: #f0f0f0;
+      }*/
+      footer {
+          padding: 2rem;
+          text-align: center;
+          background: lightblue;
+      }
+
+      /*@supports (display: flex) {
+          body {
+              display: flex;
+              flex-flow: column nowrap;
+          }
+          .wrapper {
+              flex: 1;
+              display: flex;
+              flex-flow: row wrap;
+          }
+          aside {
+              flex: 1 10rem;
+          }
+          main {
+              flex: 3 40rem;
+          }
+          /* Aquí el mediaquery
+          
+      }*/
+      @media screen and (min-width: 58rem) {
+              aside {
+                  order: -1;
+              }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Estructura de página clásica con Flexbox</h1>
+    </header>
+    <nav>
+      <a href="javascript:void(0);">Inicio</a>
+      <a href="javascript:void(0);">Trucos CSS</a>
+      <a href="javascript:void(0);">Trucos Flexbox</a>
+    </nav>
+    <div class="wrapper">
+      <main role="main">
+        <article>
+          <h2>Te cuento estos detalles</h2>
+          <p>En este ejemplo puede observarse que los elementos (secciones header, nav, 
+            div, footer, que forman parte de body como contenedor general) si ajustásemos 
+            al tamaño de un smartphone, se verían una debajo de otra en forma de columna sin 
+            posibilidad de que forme una nueva columna si se pasa del tamaño del marco.</p>
+
+          <p>Si bajamos a los detalles, el encabezado ocupa todo el espacio superior aunque 
+            se disminuya o agrande la ventana del navegador. La barra de navegación es flexible 
+            porque depende de body pero no se le aplica ningún estilo flex en particular.</p>
+
+            <p>El bloque siguiente (en un div que recoge el contenedor donde irán los párrafos de 
+              contenido y la barra lateral de navegación) estará afectado por el estilo wrapper 
+              que indica a los elementos que están en él se secuencien en forma de fila con posibilidad 
+              de que forme una nueva fila si se pasa del tamaño del marco. Además, al estar afectado 
+              el bloque de párrafos por el estilo main, informa al navegador que este bloque ocupará 
+              tres cuartas partes proporcionales, mientras la barra lateral de navegación ocupa sólo una parte
+              y si se estrecha mucho la ventana se coloca por debajo del bloque de párrafos (por el order: -1).</p>
+          
+            <p>Finalmente, tenemos un pie de documento (footer) que también es flexible porque depende 
+              de body pero no se le aplica ningún estilo flex en particular. Si se trata de pulsar sobre 
+              los enlaces del documento éstos no conducen a ninguna parte porque se les ha puesto en el 
+              href correspondiente javascript:void(0).</p>
+
+          <p>Tu turno ahora &mdash; <em>para realizarle modificaciones</em></p>
+        </article>
+      </main>
+      <aside>
+        <h3>Enlaces adicionales</h3>
+        <ul>
+          <li><a href="javascript:void(0);">Enlaces relacionados</a>
+          <li><a href="javascript:void(0);">Reseñas documento</a>
+          <li><a href="javascript:void(0);">Descargar documento</a>
+        </ul>
+      </aside>
+    </div>
+    <footer>
+      Con Flexbox, el pie de página nunca sube del borde inferior del <em>viewport</em>.
+    </footer>
+  </body>
+</html>

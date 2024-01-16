@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Influencia de box-sizing en Flexbox</title>
+    <style>
+      .flex {
+        display: flex;
+        width: 500px;
+        height: 50px;
+        margin: 2px 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      .flex li {
+        line-height: 50px;
+        text-align: center;
+      }
+
+      .flex li:nth-child(1) {
+        flex: 0 2 300px;
+        background: red;
+      }
+
+      .flex li:nth-child(2) {
+        flex: 0 1 200px;
+        background: green;
+      }
+
+      .flex li:nth-child(3) {
+        flex: 0 2 100px;
+        background: yellow;
+      }
+
+      .flex1 li {
+        padding: 0 10px;
+        box-sizing: content-box;
+      }
+
+      .flex2 li {
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul class="flex flex1">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <ul class="flex flex2">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  <script>
+    // Este script pone los anchos finales de cada celda para facilitar comprobar los cálculos
+    var filasFlex = document.getElementsByTagName('ul');
+    for(var filas=0; filas<filasFlex.length; filas++) {
+        var celdas = filasFlex[filas].getElementsByTagName('li');
+        for(var celda=0; celda<celdas.length; celda++) {
+            celdas[celda].innerText = celdas[celda].clientWidth + " px";
+        }
+    }
+
+
+  </script>
+  </body>
+</html>

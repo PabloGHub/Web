@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="eS">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pruena Practica 1</title>
+
+        <style>
+            *
+            {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body
+            {
+                background-color: #FFFFFA;
+            }
+
+            .cuerpo
+            {
+                width: 60%;
+                margin-left: 20%;
+            }
+
+            .divH2
+            {
+                background-color: greenyellow;
+
+                padding: 1rem 1rem 1rem 1rem;
+                border-radius: 1rem;
+
+                font-size: 2rem;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="cuerpo">
+            <div class="divH2"><b>Prueba Páctica 1 (Antonio)</b></div>
+
+            <img src="Fichero Prueba/w3javascript.gif" alt="w3javascript" style="float: right; margin-top: 15px;" id="w3imag">
+
+            <p id="S1P1" style="color: black;">Ejercicio que empieza cambiando el estilo de este párrafo</p>
+            <p id="S1P2" style="opacity: 100%;">Este párrafo aparece y desaparece</p>
+
+            <button onclick="cambiarParafo()">Cambia Pár.1</button>
+            <button onclick="borrarParafo()">Borra Pár.2</button>
+            <button onclick="cambiarImagen()">Cambia Alin. Imagen</button>
+
+        </div>
+
+
+        <script>
+            let S1P1 = document.getElementById("S1P1");
+            let S1P2 = document.getElementById("S1P2");
+            let w3imag = document.getElementById("w3imag");
+
+
+            function cambiarParafo()
+            {
+                if (S1P1.style.color == 'black')
+                {
+                    S1P1.style.color = 'green';
+                    S1P1.style.fontFamily = 'Comic Sans MS'
+                    S1P1.style.fontSize = '14'
+                    S1P1.style.textAlign = 'center'
+                }else{
+                    S1P1.style.color = 'black';
+                    S1P1.style.fontFamily = ''
+                    S1P1.style.fontSize = ''
+                    S1P1.style.textAlign = ''
+                }
+            }
+
+            function borrarParafo()
+            {
+                if (S1P2.style.opacity == "1")
+                {
+                    S1P2.style.opacity = "0";
+                }else{
+                    S1P2.style.opacity = "1";
+                }
+            }
+
+            function cambiarImagen()
+            {
+                console.log(w3imag);
+                if (w3imag.style.float == "right")
+                {
+                    w3imag.style.float = "left";
+                }else{
+                    w3imag.style.float = "right";
+                }
+            }
+        </script>
+    </body>
+</html>

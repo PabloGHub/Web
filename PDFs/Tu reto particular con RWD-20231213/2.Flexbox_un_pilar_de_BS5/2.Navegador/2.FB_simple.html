@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Un diseño simple con flexbox</title>
+    <style>
+      /*https://www.ostraining.com/blog/webdesign/css-flexbox-the-flex-shorthand-property*/
+      body {
+        /* El tipo de letra queda en relación al contenedor 100% es 16 px */
+        font: 1.2em Helvetica, Arial, sans-serif;
+        /* Margen de 20 px a todos lados */
+        margin: 20px;
+        /* Espaciado interior de 0 px a todos lados */
+        padding: 0;
+        /* Color de fondo del documento */
+        background-color:salmon;
+      }
+      .contenedor {
+        /* Anchura límite del contenedor */
+        max-width: 960px;
+        /* Márgenes sup/inf 2em e izq/der lo imprescindible */
+        margin: 2em auto;
+      }
+
+      .col1,
+      .col2 {
+        background-color:lemonchiffon;
+      }
+
+      @media screen and (min-width: 500px) {
+        .contenedor {
+          /* En este momento el contenedor se vuelve flex */
+          display: flex;
+        }
+
+        .col1 {
+          /* Permite crecer, pero no estrechar y establece  
+             a 0 el mínimo ideal para esta columna */
+          flex: 1;
+          margin-right: 5%;
+        }
+
+        .col2 {
+          flex: 2;
+        }
+      }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+      <div class="col1">
+        <p>La distribución de este contenido en pantalla es responsive. Estrecha o ensancha la ventana del navegador para comprobarlo.</p>
+      </div>
+      <div class="col2">
+          <p>Pese a tener el destino marcado en el GPS, Román Arthés buscó la manera de no abandonar la ciudad sin pasar ante el Castillo de Osaka. Al llegar a la majestuosa construcción de piedra ubicada dentro de un parque público, explicó al norteamericano sin bajarse de la moto, que la fortaleza tenía ocho pisos por debajo y los cinco visibles al exterior. Impresionaba el verde del césped, iluminado artificialmente, que rodeaba el castillo.</p>
+          <p> La pena era que los cerezos todavía no habían reventado en flor, aunque no faltaban muchos días para que sus habitantes pudieran disfrutar ese color rosa de las hojas del árbol, que daba nombre al equipo de fútbol local.</p>
+      </div>
+    </div>
+</body>
+
+</html>

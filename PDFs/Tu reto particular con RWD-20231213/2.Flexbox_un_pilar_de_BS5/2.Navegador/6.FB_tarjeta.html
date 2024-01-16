@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Ejemplos Flexbox con tarjetas</title>
+    <meta charset="utf-8">
+    <style>
+     body {
+       font-family: Roboto, sans-serif;
+     }
+     .tarjeta {
+       width: 400px;
+       height: 400px;
+       box-shadow: 0 0 5px #303030;
+       margin: 1rem 1rem 1rem 0;
+       background: #f0f0f0;
+       /* 1.Empieza flex */
+       display: flex;
+       flex-direction: column;
+     }
+     .tarjeta> .img {
+       display: block;
+       background-image: url("https://placeimg.com/300/300/nature/grayscale");
+       background-size: cover;
+       /* 2.Empieza flex */
+       flex: 0 1 50%;
+     }
+     .tarjeta> .titulo {
+       margin: 0;
+       padding: 1rem;
+       font-size: 1.2rem;
+       font-weight: bold;
+     }
+     .tarjeta> .descrip {
+       padding: 0 1rem;
+       /* 3.Empieza flex */
+       flex-grow: 1;
+     }
+     .tarjeta> .autor {
+       padding: 1rem;
+       font-weight: bold;
+       color: #909090;
+       text-transform: uppercase;
+     }
+    </style>
+  </head>
+  <body>
+    <!--Pasamos height a 600 -->
+    <!--Pasamos height a 200 -->
+    <!--Cambiamos texto descripción a una línea -->
+    <h1>Ejemplos Flexbox con tarjetas</h1>
+    <div class="tarjeta">
+      <div class="img"></div>
+      <p class="titulo">El Señor de la Mancha</p>
+      <div class="descrip">En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.</div>
+      <div class="autor">Alex Tolón</div>
+    </div>
+  </body>
+</html>

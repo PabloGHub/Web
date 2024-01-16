@@ -1,0 +1,36 @@
+html {
+  font-family: helvetica, arial, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 10px;
+}
+
+.container {
+  display: block;
+  /*display: inline;*/
+  /*display: inline-block;*/
+  /*display: none;*/
+}
+article {
+  background-color: red;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 20px;
+}
+
+div {
+  margin: 20px;
+}
+
+span {
+  padding: 10px;
+  border-radius: 7px;
+}
+
+article span {
+  background-color: black;
+  color: white;
+  margin: 1px;
+}
+
+
+

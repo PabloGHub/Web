@@ -1,0 +1,73 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sobre unidades de rejilla</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html, body {
+         height:100%;
+      }
+
+      body {
+        display:block;
+        margin: 8px;
+      }
+
+      #grid {
+         width:95%;
+         height:95%;
+         max-width: 800px;
+         max-height:500px;
+         margin: 0 auto;
+         display:grid;
+         grid-gap: 10px;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 1fr 3fr 1fr;
+         /* Si se cambiara por: */
+         /* grid-template-columns: auto auto auto; */
+         /* se verían diferencias de ancho en cuadrículas */
+         /* por culpa del contenido insertado en las cajas */
+         grid-template-areas:
+         "cabecera cabecera cabecera"
+         "lateral principal extra"
+         "pie pie pie";
+      }
+
+      #grid > div {
+        background: lightsalmon;
+        border: 2px solid black;
+      }
+
+      #cabecera {
+        grid-area: cabecera;
+      }
+
+      #lateral {
+        grid-area: lateral;
+      }
+
+      #principal {
+        grid-area: principal;
+      }
+
+      #extra {
+        grid-area: extra;
+      }
+
+      #pie {
+        grid-area: pie;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div id="cabecera">Cabecera</div>
+      <div id="lateral">Barra Lateral</div>
+      <div id="principal">Contenido principal</div>
+      <div id="extra">Extra</div>
+      <div id="pie">Pie</div>
+    </div>
+  </body>
+</html>

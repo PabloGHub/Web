@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Cuadrícula flexible</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .cuadricula { margin-left: 4%; width: 92%; }
+      .cols1, .cols2, .cols3, .cols4 { 
+	float: left; margin-left: 1%; margin-right: 1%;
+      }
+      .cuadricula .cols4 { width: 98%; }
+      .cuadricula .cols3 { width: 73%; }
+      .cuadricula .cols2 { width: 48%; }
+      .cuadricula .cols1 { width: 23%; }
+      p { padding: 10px; background:lime; text-align:center}
+    </style>
+  </head>
+  <body>
+    <h1>Cuadrícula fluida de 4 columnas</h1>
+    <div class="cuadricula">
+       <div>
+         <div class="cols4"><p>Encabezado</p></div>
+       </div>
+       <div>
+         <div class="cols1"><p>Secciones</p></div>
+         <div class="cols2"><p>Contenidos</p></div>
+         <div class="cols1"><p>Enlaces</p></div>
+       </div>
+       <div>
+         <div class="cols1"><p>Banner</p></div>
+         <div class="cols3"><p>Notas</p></div>
+       </div>
+       <div>
+         <div class="cols2"><p>Comentarios</p></div>
+         <div class="cols2"><p>Referencias</p></div>
+       </div>
+       <div>
+         <div class="cols1"><p>Columna 1</p></div>
+         <div class="cols1"><p>Columna 2</p></div>
+         <div class="cols1"><p>Columna 3</p></div>
+         <div class="cols1"><p>Columna 4</p></div>
+       </div> 
+    </div>
+  </body>
+</html>

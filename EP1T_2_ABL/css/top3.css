@@ -1,0 +1,92 @@
+/*--- GLOBALES ---*/
+p
+{
+  font-size: 1vw;
+}
+
+h1, h2, h3
+{
+  text-align: center;
+}
+
+h2
+{
+  font-size: 2vw;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0rem 0rem 0rem 0rem !important;
+}
+
+h3
+{
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0rem 0rem 0rem 0rem !important;
+}
+
+/*--- CLASES E IDES ---*/
+.tres_columnas
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 3.5rem;
+  /*margin-left: 30% !important;*/
+  width: 80%;
+  margin: 0% 0% 2% 10%;
+}
+
+.tres_columnas > div 
+{
+  /*max-width: 50%;*/
+
+  box-shadow: #333333 0px 0px 10px 5px;
+  padding: 5%;
+  border-radius: 15px;
+  /*margin: 3%;*/
+
+  vertical-align: top;
+}
+
+.tres_columnas > div > img
+{
+  width: 100%;
+}
+
+.tres_columnas > div > img:hover
+{
+  transform: scale(1.05);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.Lmas
+{
+  text-align: center;
+  color: #0098A2;
+  text-decoration:none;
+
+  margin: 3% 3% 3% 38%;
+}
+
+/*
+Esta parte esta copia del index de Mario de Safa
+Quiero fijarme
+
+  overflow: hidden;
+
+#square-widgets {
+  display: flex; NO
+  flex-wrap: wrap; NO
+  justify-content: center; NO
+  gap: 1rem; NO
+  padding: 1rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr); NO
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-items: center;
+  transition: all ease 0.2s;
+
+*/

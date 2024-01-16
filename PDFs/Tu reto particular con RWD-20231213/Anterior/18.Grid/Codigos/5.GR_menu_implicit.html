@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ejemplos Grid: menú con rejillas implícitas</title>
+        <style>
+         body {
+             margin: 0;
+             font-size: 18px;
+             font-family: Roboto, sans-serif;
+             min-height: 100vh;
+         }
+         header {
+             background: lightblue;
+             text-align: center;
+             padding: 2rem;
+         }
+         main {
+             padding: 2rem;
+             max-width: 1800px;
+             margin: 0 auto;
+         }
+
+         .item {
+             color: #DBB50B;
+             border: 5px solid;
+             background: #202020;
+             text-align: center;
+             display: inline-block;
+         }
+         .item h3 {
+             font-size: 1.8rem;
+             
+         }
+         .item a {
+             color: inherit;
+             font-size: .8em;
+         }
+         .item img {
+             width: 100%;
+             height: 15em;
+             object-fit: cover;
+         }
+         .item .price {
+             background: #DBB50B;
+             color: #202020;
+             margin: 10px;
+             font-size: 2em;
+         }
+
+         @supports (display: grid) {
+             main {
+                 display: grid;
+                 grid-gap: 0;
+                 justify-content: center;
+                 
+                 grid: auto-flow dense minmax(580px, auto) / repeat(auto-fit, minmax(300px, 1fr));
+                 /* equivalente a */
+                 grid-auto-flow: row dense;
+                 grid-auto-rows: minmax(580px, auto);
+                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+             }
+             @media screen and (min-width: calc(700px + 4rem)) {
+                 .wide {
+                     grid-column-end: span 2;
+                 }
+             }
+         }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Ejemplos Grid: menú con rejillas implícitas</h1>
+        </header>
+        <main role="main">
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa normal</h3>
+                <p class="description">Carne, lechuga, pepinillo. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">4.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa con queso</h3>
+                <p class="description">Carne, queso, lechuga, pepinillo. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">5.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa especial</h3>
+                <p class="description">Carne, queso, lechuga, pepinillo, bacon, tomate. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">6.95€</p>
+            </div>
+            <div class="item wide">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa campus</h3>
+                <p class="description">Carne, queso, lechuga, bacon, tomate, huevo. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">6.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa doble</h3>
+                <p class="description">Doble de carne, lechuga, pepinillo. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">6.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa doble con queso</h3>
+                <p class="description">Doble de carne, doble de queso, lechuga, pepinillo. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">7.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa sin gluten</h3>
+                <p class="description">Carne, queso, lechuga, tomate, pepinillo, pan sin gluten. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">6.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa de salmón</h3>
+                <p class="description">Filete salmón, queso, lechuga, tomate, mayonesa. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">7.95€</p>
+            </div>
+            <div class="item wide">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa vegana</h3>
+                <p class="description">Seitán, queso vegano, lechuga, tomate, pepinillo. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">6.95€</p>
+            </div>
+            <div class="item">
+                <img src="hamburgimg.jpg">
+                <h3 class="title">Hamburguesa personalizada</h3>
+                <p class="description">Base de hamburguesa normal + 3 ingredientes a elegir. <a href="https://www.bebesymas.com/alimentacion-para-bebes-y-ninos/como-quieren-conseguir-que-tu-hijo-se-atiborre-de-azucar-pensando-que-es-sano" target="_blank">Una hamburguesa está bien, pero cuídate</a></p>
+                <p class="price">7.55€</p>
+            </div>
+        </main>
+    </body>
+</html>
